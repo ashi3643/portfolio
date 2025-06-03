@@ -1,0 +1,25 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.social-icons a {
+  color: #38bdf8;
+  transition: color 0.2s, transform 0.2s, box-shadow 0.2s;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0.2em;
+}
+.social-icons a:hover {
+  color: #0ea5e9;
+  transform: scale(1.15) rotate(-8deg);
+  box-shadow: 0 2px 12px #38bdf822;
+}
+.social-icons a:focus {
+  outline: 2px solid var(--accent-pink);
+  outline-offset: 2px;
+  background: var(--card-hover-bg);
+}

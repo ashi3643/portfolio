@@ -1,0 +1,48 @@
+:root {
+  /* Base Colors */
+  --primary-dark: #1E1E2F; /* Charcoal Navy */
+  --primary-light: #F9FAFB; /* Off White */
+  --secondary-dark: #2A2B3C; /* Blue Gray */
+  --secondary-light: #F3F4F6; /* Very Light Gray */
+
+  /* Accent Colors */
+  --accent-primary: #6366F1; /* Indigo for Light, Electric Indigo for Dark Primary Button */
+  --accent-secondary: #3B82F6; /* Blue for Light Secondary Button */
+  --accent-tertiary: #22D3EE; /* Cyan for Dark Accent */
+
+  /* Text Colors */
+  --text-primary-dark: #F8FAFC; /* Soft White */
+  --text-secondary-dark: #D1D5DB; /* Gray-300 */
+  --text-primary-light: #111827; /* Dark Gray */
+  --text-secondary-light: #6B7280; /* Gray-500 */
+
+  /* Status Colors */
+  --success: #22c55e;
+  --warning: #eab308;
+  --error: #ef4444;
+}
+
+/* Light Mode (Default) */
+:root {
+  --background: var(--primary-light);
+  --background-secondary: var(--secondary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --accent: var(--accent-primary); /* Indigo */
+  --accent-hover: var(--accent-secondary); /* Blue */
+  --card-bg: var(--primary-light);
+  --card-border: var(--secondary-light);
+}
+
+/* Dark Mode */
+html[data-theme="dark"] {
+  --background: var(--primary-dark);
+  --background-secondary: var(--secondary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --accent: var(--accent-tertiary); /* Cyan */
+  --accent-hover: #4F46E5; /* Electric Indigo hover for primary button in dark mode*/
+  --btn-secondary-dark-hover: #0EA5E9; /* Sky Blue hover for secondary button in dark mode */
+  --card-bg: var(--secondary-dark);
+  --card-border: var(--secondary-dark); /* Using section bg for card border in dark mode */
+}

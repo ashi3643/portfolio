@@ -1,0 +1,151 @@
+/* Elegant, Masculine, and Tech-Savvy Theme Colors */
+:root {
+  /* Light mode colors */
+  --charcoal-black: #2C3531; /* Dark Gray/Green */
+  --ash-white: #D1E8E2; /* Very Light Blue/Green */
+  --cool-gray: #D9B08C; /* Light Brown/Tan */
+  --gunmetal: #116466; /* Teal/Dark Cyan */
+  --rust-orange: #FFCB9A; /* Light Orange/Peach for highlight */
+  --dark-slate: #2C3531; /* Dark Gray/Green for primary text */
+  --card-border: rgba(17, 100, 102, 0.2); /* Subtle teal border */
+  --card-border-hover: rgba(17, 100, 102, 0.4); /* Slightly stronger on hover */
+
+  /* Default light theme */
+  --background: #D1E8E2;
+  --text-primary: #2C3531;
+  --text-secondary: #116466;
+  --accent: #FFCB9A;
+  --accent-hover: #116466;
+  --button: #116466;
+  --highlight: #FFCB9A;
+  --card-bg: #D1E8E2;
+  --navbar-bg: #D1E8E2;
+  --card-shadow: 0 4px 24px 0 rgba(17, 100, 102, 0.1), 0 1.5px 4px 0 rgba(0,0,0,0.08);
+
+  font-family: 'Poppins', 'Roboto', 'Inter', system-ui, sans-serif;
+  color-scheme: light dark;
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+
+/* Dark mode colors */
+[data-theme="dark"] {
+  --background: #1a1a1a;
+  --text-primary: #D1E8E2;
+  --text-secondary: #FFCB9A;
+  --accent: #116466;
+  --accent-hover: #FFCB9A;
+  --button: #116466;
+  --highlight: #FFCB9A;
+  --card-bg: #2C3531;
+  --navbar-bg: #2C3531;
+  --card-border: rgba(209, 232, 226, 0.15); /* Subtle light border for dark mode */
+  --card-border-hover: rgba(209, 232, 226, 0.3); /* Slightly stronger on hover */
+  --card-shadow: 0 4px 24px 0 rgba(0,0,0,0.3), 0 1.5px 4px 0 rgba(0,0,0,0.2);
+}
+
+
+a {
+  color: var(--accent);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--highlight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-family: 'Poppins', 'Roboto', 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+}
+
+button, .btn {
+  background: var(--button);
+  color: var(--ash-white);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.6em;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+button:hover, .btn:hover {
+  background: var(--accent-hover);
+  color: var(--ash-white);
+}
+
+.card, .project-card, .skill-category {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  box-shadow: var(--card-shadow);
+}
+
+.navbar {
+  background: var(--navbar-bg);
+  color: var(--text-secondary);
+  box-shadow: 0 2px 8px rgba(30,136,229,0.10);
+}
+
+.nav-links li a {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.nav-links li a:hover {
+  color: var(--gunmetal); /* Use Teal for hover color */
+}
+
+/* Accent for highlights and CTAs */
+.cta, .highlight, .floating-hire-btn {
+  background: var(--gunmetal); /* Using Teal for button background */
+  color: var(--ash-white) !important; /* Very Light Blue/Green for button text */
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 32px rgba(17, 100, 102, 0.33); /* Adjusted shadow color to match new background */
+}
+
+/* Card backgrounds for sections */
+.section-container, .about-section, .skills-section, .projects-section, .contact-section {
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+/* Subtle card backgrounds for cards */
+.card, .project-card, .skill-category {
+  background: var(--ash-white); /* Very Light Blue/Green */
+  color: var(--text-primary);
+}
+
+/* Typography tweaks */
+p, li, span, .text-secondary {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #1a1a1a;
+    --text-primary: #D1E8E2;
+    --text-secondary: #FFCB9A;
+    --accent: #116466;
+    --accent-hover: #FFCB9A;
+    --button: #116466;
+    --highlight: #FFCB9A;
+    --card-bg: #2C3531;
+    --navbar-bg: #2C3531;
+    --card-shadow: 0 4px 24px 0 rgba(0,0,0,0.3), 0 1.5px 4px 0 rgba(0,0,0,0.2);
+  }
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --background: #D1E8E2;
+    --text-primary: #2C3531;
+    --text-secondary: #2C3531;
+    --card-bg: #D1E8E2;
+  }
+}

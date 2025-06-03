@@ -1,0 +1,170 @@
+:root {
+  /* These variables seem specific to Skills.css and are not used elsewhere. */
+  /* They might be redundant if theme variables are used instead. */
+  /* Consider removing or integrating them into variables.css if they are global. */
+  --primary-color: #116466; /* Dark Teal */
+  --secondary-color: #4db6ac; /* Medium Teal */
+  --text-primary: #a5d6a7; /* Light Green */
+  --text-secondary: #D1E8E2; /* Very Light Blue/Green */
+  --card-bg: #2c3531; /* Charcoal Black */
+}
+
+.skills-section {
+  padding: 6rem 1.5rem 4rem 1.5rem;
+  background: var(--background);
+  color: var(--text-primary);
+  text-align: left;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.skills-section h2 {
+  color: var(--accent-blue);
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.skills-list, .skills-list li {
+  display: none !important;
+}
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.skill-category {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border-radius: 18px;
+  box-shadow: var(--shadow-medium);
+  padding: 2rem 1.5rem 1.2rem 1.5rem;
+  transition: box-shadow 0.2s, background 0.3s;
+  border: 1px solid var(--border-color);
+  min-width: 0;
+  animation: fadeInUpCard 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: both;
+  opacity: 0;
+}
+.skills-categories .skill-category {
+  opacity: 1;
+  animation-delay: calc(var(--i, 0) * 0.12s);
+}
+
+.skill-category-title {
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.skill-list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.skill-list li {
+  color: var(--text-secondary);
+  background: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 0.2em 0 0.2em 0.2em;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.skill-list li::marker {
+  color: var(--accent-brown);
+}
+.skill-list li:hover, .skill-list li:focus {
+  background: var(--card-hover-bg);
+  color: var(--text-primary);
+  transform: scale(1.04);
+  box-shadow: var(--shadow-small);
+  z-index: 2;
+}
+.skill-list li:focus {
+  outline: 2.5px solid var(--accent-blue);
+  outline-offset: 2px;
+  background: var(--card-hover-bg);
+  color: var(--text-primary);
+  z-index: 2;
+}
+.skill-category:hover, .skill-category:focus-within {
+  box-shadow: var(--shadow-large);
+  transform: translateY(-6px) scale(1.035) rotate(-1deg);
+  border-color: var(--accent-blue);
+  background: var(--card-hover-bg);
+  transition: box-shadow 0.25s, background 0.25s, transform 0.25s;
+}
+.skill-category:not(:last-child) {
+  border-bottom: 2px solid var(--border-color);
+}
+@keyframes fadeInUpCard {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 900px) {
+  .skills-section {
+    padding: 3rem 1rem 2rem 1rem;
+    max-width: 98vw;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
+  .skills-categories {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .skill-category {
+    padding: 1.2rem 0.7rem 0.8rem 0.7rem;
+    border-radius: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 1.2rem 0.2rem 0.8rem 0.2rem;
+    border-radius: 8px;
+  }
+  .skill-category {
+    padding: 1rem 0.4rem 0.7rem 0.4rem;
+    border-radius: 7px;
+    min-width: 0;
+  }
+  .skill-list li {
+    font-size: 1rem;
+    padding: 0.4em 0 0.4em 0.4em;
+  }
+  .skill-category-title {
+    font-size: 1rem;
+  }
+}
+
+.skill-title {
+  color: #116466; /* Dark Teal */
+}
+
+.skill-description {
+  color: #a5d6a7; /* Light Green */
+}
+
+.skill-btn {
+  background: #00796b; /* Teal Green */
+  color: #D1E8E2; /* Very Light Blue/Green */
+}
